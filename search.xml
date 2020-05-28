@@ -1,71 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>blog2</title>
+    <url>/2020/05/26/blog2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
     <title>blog1</title>
     <url>/2020/05/26/blog1/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>blog10</title>
     <url>/2020/05/26/blog10/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>blog3</title>
     <url>/2020/05/26/blog3/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>blog4</title>
-    <url>/2020/05/26/blog4/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>blog2</title>
-    <url>/2020/05/26/blog2/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>blog5</title>
     <url>/2020/05/26/blog5/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
+    <title>blog4</title>
+    <url>/2020/05/26/blog4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>blog6</title>
     <url>/2020/05/26/blog6/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>blog7</title>
     <url>/2020/05/26/blog7/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>blog8</title>
-    <url>/2020/05/26/blog8/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>blog9</title>
     <url>/2020/05/26/blog9/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
+    <title>blog8</title>
+    <url>/2020/05/26/blog8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
     <title>my first blog</title>
     <url>/2017/04/24/my-first-blog/</url>
-    <content><![CDATA[<h1 id="标题栏在这"><a href="#标题栏在这" class="headerlink" title="标题栏在这"></a>标题栏在这</h1><h2 id="二级标题的内容在这里"><a href="#二级标题的内容在这里" class="headerlink" title="二级标题的内容在这里"></a>二级标题的内容在这里</h2><p>这里是正文部分的内容，很容易分辨出来正文部分是什么样的东西。看清楚内容里面是什么。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="标题栏在这"><a href="#标题栏在这" class="headerlink" title="标题栏在这"></a>标题栏在这</h1><h2 id="二级标题的内容在这里"><a href="#二级标题的内容在这里" class="headerlink" title="二级标题的内容在这里"></a>二级标题的内容在这里</h2><p>这里是正文部分的内容，很容易分辨出来正文部分是什么样的东西。看清楚内容里面是什么。</p>
 ]]></content>
   </entry>
   <entry>
     <title>实验2</title>
     <url>/2018/05/14/%E5%AE%9E%E9%AA%8C2/</url>
-    <content><![CDATA[<h1 id="这个实验"><a href="#这个实验" class="headerlink" title="这个实验"></a>这个实验</h1><p>关于这次的实验，必须说明的是自己的一些亲身经历与体验，想了解的话必须自己动手实践，自己动手才是硬道理，这一点谁都无法改变。必须要向现实妥协，不论你是否愿意。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="这个实验"><a href="#这个实验" class="headerlink" title="这个实验"></a>这个实验</h1><p>关于这次的实验，必须说明的是自己的一些亲身经历与体验，想了解的话必须自己动手实践，自己动手才是硬道理，这一点谁都无法改变。必须要向现实妥协，不论你是否愿意。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2020/05/26/test/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="This-is-a-test-blog"><a href="#This-is-a-test-blog" class="headerlink" title="This is a test blog."></a>This is a test blog.</h1><h1 id="测试用途"><a href="#测试用途" class="headerlink" title="测试用途"></a>测试用途</h1> <blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.  </p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>  
+
+<blockquote><p>To be or not to be, that’s a question.  </p>
+<footer><strong>William Shakespeare</strong><cite>Hamlet</cite></footer></blockquote> 
+<p><img src="https://bkimg.cdn.bcebos.com/pic/77c6a7efce1b9d16b7629988fddeb48f8d5464b5?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg" alt="shakespears"></p>
+<p>For ‘tis aquestion left us yet to prove,</p>
+<p>Whether lovelead fortune, or else fortune love.</p>
+<p>The great mandown, you mark his favourite flies;</p>
+<p>The poor advancedmakes friends of enemies.</p>
+<p>And hithertodoth love on fortune tend;</p>
+<p>For who notneeds shall never lack a friend,</p>
+<p>And who in wanta hollow friend doth try,</p>
+<p>Directly seasonshim his enemy.</p>
+<p>But, orderly toend where I begun,</p>
+<p>Our wills andfates do so contrary run</p>
+<p>That our devicesstill are overthrown;</p>
+<p>Our thoughts areours, their ends none of our own:</p>
 ]]></content>
   </entry>
   <entry>
     <title>小学的一篇小练笔</title>
     <url>/2009/12/04/%E6%97%A7%E4%BA%8B%E9%87%8D%E6%8F%90/</url>
-    <content><![CDATA[<h1 id="雾"><a href="#雾" class="headerlink" title="雾"></a>雾</h1><p>早晨七点中左右，起雾了。这江北的雾虽不及江南的湿润，也不及北方的干涩，却恰到好处，没走向极端。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="雾"><a href="#雾" class="headerlink" title="雾"></a>雾</h1><p>早晨七点中左右，起雾了。这江北的雾虽不及江南的湿润，也不及北方的干涩，却恰到好处，没走向极端。</p>
 <p>这雾如同淘气的孩子，你不逮它，它便在你身边游荡，左窜、右窜，当生气时，想揪住它，他却悄然消失。</p>
 ]]></content>
       <tags>
@@ -73,36 +96,50 @@
       </tags>
   </entry>
   <entry>
+    <title>test28</title>
+    <url>/2020/05/27/test28/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="显示效果测试"><a href="#显示效果测试" class="headerlink" title="显示效果测试"></a>显示效果测试</h1><h2 id="中文（标题二级）"><a href="#中文（标题二级）" class="headerlink" title="中文（标题二级）"></a>中文（标题二级）</h2><hr>
+<p>正文显示效果</p>
+<h1 id="雾"><a href="#雾" class="headerlink" title="雾"></a>雾</h1><p>早晨七点中左右，起雾了。这江北的雾虽不及江南的湿润，也不及北方的干涩，却恰到好处，没走向极端。</p>
+<p>这雾如同淘气的孩子，你不逮它，它便在你身边游荡，左窜、右窜，当生气时，想揪住它，它却悄然消失。</p>
+<h3 id="图片预览"><a href="#图片预览" class="headerlink" title="图片预览"></a>图片预览</h3><p><img src="https://tse3-mm.cn.bing.net/th/id/OIP.Pn9LvjVp_qgMpVzk79jCQAHaE7?w=290&h=188&c=7&o=5&dpr=1.56&pid=1.7" alt="img"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>my first blog</title>
     <url>/2018/05/12/%E5%AE%9E%E9%AA%8C/</url>
-    <content><![CDATA[<h1 id="title"><a href="#title" class="headerlink" title="title"></a>title</h1><h2 id="story"><a href="#story" class="headerlink" title="story"></a>story</h2><p>This is a story that I have to talk about in the beginning of a long journey.</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="title"><a href="#title" class="headerlink" title="title"></a>title</h1><h2 id="story"><a href="#story" class="headerlink" title="story"></a>story</h2><p>This is a story that I have to talk about in the beginning of a long journey.</p>
 <p><img src="/images/1.jpg" alt="doom"></p>
 <h2 id="end"><a href="#end" class="headerlink" title="end"></a>end</h2><p>Find the way home.</p>
 ]]></content>
   </entry>
   <entry>
-    <title>test</title>
-    <url>/2020/05/26/test/</url>
-    <content><![CDATA[<h1 id="This-is-a-test-blog"><a href="#This-is-a-test-blog" class="headerlink" title="This is a test blog."></a>This is a test blog.</h1><p>????</p>
-<p><img src="/images/2.jpg" alt="tlou"></p>
-<p><img src="https://tse2-mm.cn.bing.net/th/id/OIP.omXQwe-rT48Vl_76dsmSTgHaEo?w=229&h=160&c=7&o=5&dpr=1.56&pid=1.7" alt="hulianwang"></p>
-<p><img src="/.com//2.jpg" alt="t"></p>
-<blockquote><p>Lo  </p>
-</blockquote>  
-
-<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.  </p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>  
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alert(&#39;Hello World!&#39;);</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
+    <title>??28</title>
+    <url>/2020/05/20/%E6%B5%8B%E8%AF%9528/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id><a href="#" class="headerlink" title="??????"></a>??????</h1><p>???????????</p>
+<hr>
+<h2 id="-1"><a href="#-1" class="headerlink" title="???"></a>???</h2><h2 id="-2"><a href="#-2" class="headerlink" title="?"></a>?</h2><p><img src="https://tse3-mm.cn.bing.net/th/id/OIP.Pn9LvjVp_qgMpVzk79jCQAHaE7?w=290&h=188&c=7&o=5&dpr=1.56&pid=1.7" alt="frog"></p>
+<p><em>??????</em></p>
+<hr>
+<blockquote>
+<pre><code>???????????????????????????????????????????????</code></pre></blockquote>
+<blockquote>
+<pre><code>???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????�????�?????????����??????????????????</code></pre></blockquote>
+<blockquote>
+<pre><code>????????????????????????????????????????????????????????????????????????????????????????</code></pre></blockquote>
+<blockquote>
+<pre><code>???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????</code></pre></blockquote>
+<blockquote>
+<pre><code>??????????????????????????????????????</code></pre></blockquote>
+<blockquote>
+<pre><code>????????????????????????????</code></pre></blockquote>
+<hr>
+<pre><code>*2009?12?4?*</code></pre>]]></content>
   </entry>
   <entry>
     <title>实验3</title>
     <url>/2018/05/18/%E5%AE%9E%E9%AA%8C3/</url>
-    <content><![CDATA[<h1 id="想要声明的点"><a href="#想要声明的点" class="headerlink" title="想要声明的点"></a>想要声明的点</h1><p>魂系列与宫崎英高。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="想要声明的点"><a href="#想要声明的点" class="headerlink" title="想要声明的点"></a>想要声明的点</h1><p>魂系列与宫崎英高。</p>
 <p>魂系列是近十年内最受欢迎的游戏系列之一，从2009年发售的恶魔之魂开始，游戏就奠定了自己的基调，玩法，系统以及叙事手法。可以说魂系列开创了一个新的亚游戏类型，即所谓的受死游戏。</p>
 ]]></content>
   </entry>
