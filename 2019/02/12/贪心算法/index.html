@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>贪心算法 | Summereight Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+  <div id="wrapper">
+    <header id="header">
+  <h1 id="title">
+    <a href="/">Summereight Blog</a>
+  </h1>
+  <nav>
+    
+    
+      
+      <a class="nav-link" href="/">Home</a>
+    
+      
+        <span class="nav-spacer">×</span>
+      
+      <a class="nav-link" href="/archives">Archives</a>
+    
+      
+        <span class="nav-spacer">×</span>
+      
+      <a class="nav-link" href="https://www.github.com/Kigowow" target="_blank" rel="noopener">Github</a>
+    
+    
+  </nav>
+</header>
+
+    <div id="content">
+      <article id="post-贪心算法" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="headline name">
+      贪心算法
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2019-02-11T21:13:50.000Z" itemprop="datePublished">二月 12, 2019, 5:13 凌晨</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h3 id="贪心算法的实现示例"><a href="#贪心算法的实现示例" class="headerlink" title="贪心算法的实现示例"></a>贪心算法的实现示例</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">float</span> weight;</span><br><span class="line">	<span class="keyword">float</span> value;</span><br><span class="line">	<span class="keyword">bool</span> mark;</span><br><span class="line">	<span class="keyword">char</span> char_mark;</span><br><span class="line">	<span class="keyword">float</span> pre_weight_value;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> Weight[<span class="number">7</span>] = &#123;<span class="number">35</span>,<span class="number">30</span>,<span class="number">60</span>,<span class="number">50</span>,<span class="number">40</span>,<span class="number">15</span>,<span class="number">20</span>&#125;;</span><br><span class="line">	<span class="keyword">float</span> Value [<span class="number">7</span>] = &#123;<span class="number">10</span>,<span class="number">40</span>,<span class="number">30</span>,<span class="number">50</span>,<span class="number">35</span>,<span class="number">40</span>,<span class="number">30</span>&#125;;</span><br><span class="line">	Node <span class="built_in">array</span>[<span class="number">7</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">7</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">array</span>[i].value = Value[i];</span><br><span class="line">		<span class="built_in">array</span>[i].weight = Weight[i];</span><br><span class="line">		<span class="built_in">array</span>[i].char_mark = <span class="number">65</span> + i;</span><br><span class="line">		<span class="built_in">array</span>[i].mark = <span class="literal">false</span>;</span><br><span class="line">		<span class="built_in">array</span>[i].pre_weight_value = Value[i] / Weight[i];</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">7</span>;i++)</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">array</span>[i].pre_weight_value&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">float</span> weight_all=<span class="number">0.0</span>;</span><br><span class="line">	<span class="keyword">float</span> value_all = <span class="number">0.0</span>;</span><br><span class="line">	<span class="keyword">float</span> <span class="built_in">max</span> = <span class="number">0.0</span>;</span><br><span class="line">	<span class="keyword">char</span> charArray[<span class="number">7</span>];</span><br><span class="line">	<span class="keyword">int</span> flag,n = <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span>(weight_all &lt;= <span class="number">150</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> index=<span class="number">0</span>;index &lt; <span class="number">7</span>; ++index)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="built_in">array</span>[index].pre_weight_value &gt; <span class="built_in">max</span> &amp;&amp; <span class="built_in">array</span>[index].mark == <span class="literal">false</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">max</span> = <span class="built_in">array</span>[index].pre_weight_value ;</span><br><span class="line">				flag = index;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		charArray[n++] = <span class="built_in">array</span>[flag].char_mark;</span><br><span class="line">		<span class="built_in">array</span>[flag].mark = <span class="literal">true</span>;</span><br><span class="line">		weight_all += <span class="built_in">array</span>[flag].weight;</span><br><span class="line">		value_all += <span class="built_in">array</span>[flag].value;</span><br><span class="line">		<span class="built_in">max</span> = <span class="number">0.0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;charArray[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"weight_all:"</span>&lt;&lt;weight_all- <span class="built_in">array</span>[n<span class="number">-1</span>].weight&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"value_all:"</span>&lt;&lt;value_all&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    <div class="article-category">
+      
+      
+      
+        <b>Tags:</b>
+        <a class="article-tag-link" href="/tags/code/" rel="tag">code</a>
+      
+    </div>
+    
+
+    
+  </div>
+</article>
+
+  
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2019/03/26/blog1/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          blog1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/18/book1/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          书评“1984”
+        
+      </div>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+    </div>
+  </div>
+  
+
+
+
+
+<div id="settings-container">
+  <div id="dark-mode">暗</div>
+  <div id="sans-font">字体1</div>
+</div>
+<script type="text/javascript">
+let d=document,r=d.documentElement.style,f=r.setProperty.bind(r),l=localStorage,s=l.getItem('s'),n=l.getItem('n'),m=d.getElementById("dark-mode"),b=()=>{f('--bg-color','#fafafa');f('--code-bg-color','#f4f4f4');f('--text-color','#212121');f('--secondary-color','#808080');f('--tertiary-color','#b0b0b0');f('--link-color','#b5c8cf');f('--link-hover-color','#618794');f('--link-bg-color','#dae4e7');f('--selection-color','#dae4e7');m.innerHTML="暗"},c=()=>{f('--bg-color','#212121');f('--code-bg-color','#292929');f('--text-color','#fff');f('--secondary-color','#c0c0c0');f('--tertiary-color','#6e6e6e');f('--link-color','#4d6b75');f('--link-hover-color','#96b1bb');f('--link-bg-color','#5d828e');f('--selection-color','#acc1c9');m.innerHTML="亮"},o=d.getElementById("sans-font"),e=()=>{f('--body-stack','"Lora", "Georgia", "Times New Roman", serif');o.innerHTML="字体1"},g=()=>{f('--body-stack','"Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Verdana", sans-serif');o.innerHTML="字体2"};m.onclick=()=>{if(s==2){s=1;l.setItem('s',s);c()}else{s=2;l.setItem('s',s);b()}};o.onclick=()=>{if(n==2){n=1;l.setItem('n',n);g()}else{n=2;l.setItem('n',n);e()}};if(!s){s=2;l.setItem('s',2)};if(s==1){c()};if(!n){n=2;l.setItem('n',2)};if(n==1){g()};
+</script>
+
+
+
+
+</body>
+</html>

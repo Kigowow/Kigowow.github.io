@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>广度优先遍历 | Summereight Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+  <div id="wrapper">
+    <header id="header">
+  <h1 id="title">
+    <a href="/">Summereight Blog</a>
+  </h1>
+  <nav>
+    
+    
+      
+      <a class="nav-link" href="/">Home</a>
+    
+      
+        <span class="nav-spacer">×</span>
+      
+      <a class="nav-link" href="/archives">Archives</a>
+    
+      
+        <span class="nav-spacer">×</span>
+      
+      <a class="nav-link" href="https://www.github.com/Kigowow" target="_blank" rel="noopener">Github</a>
+    
+    
+  </nav>
+</header>
+
+    <div id="content">
+      <article id="post-BFS.md" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="headline name">
+      广度优先遍历
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2018-03-26T02:13:50.000Z" itemprop="datePublished">三月 26, 2018, 10:13 上午</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h3 id="BFS-broad-first-search"><a href="#BFS-broad-first-search" class="headerlink" title="BFS(broad first search)"></a>BFS(broad first search)</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY  65535 <span class="comment">/* 表示权值的无穷*/</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> EdgeType;<span class="comment">//边上的权值类型</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VertexType;<span class="comment">//顶点类型</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MaxSize=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> visited[MaxSize];<span class="comment">//全局标识数组</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MGraph</span>//邻接矩阵类</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        MGraph()&#123;vertexNum=<span class="number">0</span>;edgeNum=<span class="number">0</span>;&#125;</span><br><span class="line">        MGraph(VertexType a[],<span class="keyword">int</span> n);<span class="comment">//构造函数，初始化具有n个顶点的零图</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">CreateMGraph1</span><span class="params">(MGraph *Gp)</span></span>;<span class="comment">//建立无向图的邻接矩阵</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">(<span class="keyword">int</span> v)</span></span>;<span class="comment">//从v出发广度优先遍历</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="keyword">int</span> vertexNum,edgeNum;<span class="comment">//顶点数和边数</span></span><br><span class="line">        EdgeType adj[MaxSize][MaxSize];<span class="comment">//邻接矩阵</span></span><br><span class="line">        VertexType vertex[MaxSize];<span class="comment">//顶点表</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//构造函数，初始化具有n个顶点的零图</span></span><br><span class="line">MGraph::MGraph(VertexType a[],<span class="keyword">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">    vertexNum=n;edgeNum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) vertex[i]=a[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">            adj[i][j]=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//建立无向图的邻接矩阵表示</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MGraph::CreateMGraph1</span><span class="params">(MGraph *Gp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j, k;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入顶点数和边数（空格分隔）："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; Gp-&gt;vertexNum &gt;&gt; Gp-&gt;edgeNum;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入顶点信息（空格分隔）："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; Gp-&gt;vertexNum; i++)</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; Gp-&gt;vertex[i];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; Gp-&gt;vertexNum; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; Gp-&gt;vertexNum; j++)</span><br><span class="line">            Gp-&gt;adj[i][j] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; Gp-&gt;edgeNum; k++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入边（vi, vj)的上标i，下标j（空格分隔）:"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; i &gt;&gt; j;</span><br><span class="line">        Gp-&gt;adj[i][j] = <span class="number">1</span>;</span><br><span class="line">        Gp-&gt;adj[j][i] = <span class="number">1</span>;<span class="comment">// 因为是无向图，矩阵对称</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//从v出发广度优先搜索遍历连通图</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MGraph::BFS</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n=vertexNum,front,rear;</span><br><span class="line">    <span class="keyword">int</span> Q[MaxSize];<span class="comment">//队列</span></span><br><span class="line">    front=rear=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span>(v&lt;<span class="number">0</span>||v&gt;=n) <span class="keyword">throw</span> <span class="string">"位置出错"</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;vertex[v]&lt;&lt;<span class="string">"　"</span>;</span><br><span class="line">    visited[v]=<span class="number">1</span>;</span><br><span class="line">    Q[++rear]=v;<span class="comment">//被访问过的顶点进入队列</span></span><br><span class="line">    <span class="keyword">while</span>(front!=rear)</span><br><span class="line">    &#123;</span><br><span class="line">        v=Q[++front];<span class="comment">//队列首元素出队列</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(adj[v][j]==<span class="number">1</span>&amp;&amp;visited[j]==<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;vertex[j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">                visited[j]=<span class="number">1</span>;</span><br><span class="line">                Q[++rear]=j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    MGraph grph;</span><br><span class="line">    grph.CreateMGraph1(&amp;grph);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;MaxSize;i++)</span><br><span class="line">        visited[i]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;grph.vertexNum;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;grph.vertexNum;j++)</span><br><span class="line">            &#123;<span class="built_in">cout</span>&lt;&lt;grph.adj[i][j]&lt;&lt;<span class="string">" "</span>;&#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"广度优先遍历结果："</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    grph.BFS(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    <div class="article-category">
+      
+      
+      
+        <b>Tags:</b>
+        <a class="article-tag-link" href="/tags/code/" rel="tag">code</a>
+      
+    </div>
+    
+
+    
+  </div>
+</article>
+
+  
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2018/05/12/%E5%AE%9E%E9%AA%8C/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          my first blog
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/25/book2/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          书评 乔布斯传
+        
+      </div>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+    </div>
+  </div>
+  
+
+
+
+
+<div id="settings-container">
+  <div id="dark-mode">暗</div>
+  <div id="sans-font">字体1</div>
+</div>
+<script type="text/javascript">
+let d=document,r=d.documentElement.style,f=r.setProperty.bind(r),l=localStorage,s=l.getItem('s'),n=l.getItem('n'),m=d.getElementById("dark-mode"),b=()=>{f('--bg-color','#fafafa');f('--code-bg-color','#f4f4f4');f('--text-color','#212121');f('--secondary-color','#808080');f('--tertiary-color','#b0b0b0');f('--link-color','#b5c8cf');f('--link-hover-color','#618794');f('--link-bg-color','#dae4e7');f('--selection-color','#dae4e7');m.innerHTML="暗"},c=()=>{f('--bg-color','#212121');f('--code-bg-color','#292929');f('--text-color','#fff');f('--secondary-color','#c0c0c0');f('--tertiary-color','#6e6e6e');f('--link-color','#4d6b75');f('--link-hover-color','#96b1bb');f('--link-bg-color','#5d828e');f('--selection-color','#acc1c9');m.innerHTML="亮"},o=d.getElementById("sans-font"),e=()=>{f('--body-stack','"Lora", "Georgia", "Times New Roman", serif');o.innerHTML="字体1"},g=()=>{f('--body-stack','"Lato", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Verdana", sans-serif');o.innerHTML="字体2"};m.onclick=()=>{if(s==2){s=1;l.setItem('s',s);c()}else{s=2;l.setItem('s',s);b()}};o.onclick=()=>{if(n==2){n=1;l.setItem('n',n);g()}else{n=2;l.setItem('n',n);e()}};if(!s){s=2;l.setItem('s',2)};if(s==1){c()};if(!n){n=2;l.setItem('n',2)};if(n==1){g()};
+</script>
+
+
+
+
+</body>
+</html>
