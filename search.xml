@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>blog2</title>
-    <url>/2020/05/26/blog2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-  </entry>
-  <entry>
     <title>blog1</title>
     <url>/2020/05/26/blog1/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
+    <title>blog2</title>
+    <url>/2020/05/26/blog2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
     <title>blog10</title>
     <url>/2020/05/26/blog10/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-  </entry>
-  <entry>
-    <title>blog3</title>
-    <url>/2020/05/26/blog3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-  </entry>
-  <entry>
-    <title>blog5</title>
-    <url>/2020/05/26/blog5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
@@ -36,18 +26,28 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
+    <title>blog3</title>
+    <url>/2020/05/26/blog3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
+    <title>blog5</title>
+    <url>/2020/05/26/blog5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
     <title>blog7</title>
     <url>/2020/05/26/blog7/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
-    <title>blog9</title>
-    <url>/2020/05/26/blog9/</url>
+    <title>blog8</title>
+    <url>/2020/05/26/blog8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
-    <title>blog8</title>
-    <url>/2020/05/26/blog8/</url>
+    <title>blog9</title>
+    <url>/2020/05/26/blog9/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
   <entry>
@@ -57,9 +57,34 @@
 ]]></content>
   </entry>
   <entry>
+    <title>my first blog</title>
+    <url>/2018/05/12/%E5%AE%9E%E9%AA%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="title"><a href="#title" class="headerlink" title="title"></a>title</h1><h2 id="story"><a href="#story" class="headerlink" title="story"></a>story</h2><p>This is a story that I have to talk about in the beginning of a long journey.</p>
+<p><img src="/images/1.jpg" alt="doom"></p>
+<h2 id="end"><a href="#end" class="headerlink" title="end"></a>end</h2><p>Find the way home.</p>
+]]></content>
+  </entry>
+  <entry>
     <title>实验2</title>
     <url>/2018/05/14/%E5%AE%9E%E9%AA%8C2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="这个实验"><a href="#这个实验" class="headerlink" title="这个实验"></a>这个实验</h1><p>关于这次的实验，必须说明的是自己的一些亲身经历与体验，想了解的话必须自己动手实践，自己动手才是硬道理，这一点谁都无法改变。必须要向现实妥协，不论你是否愿意。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>test28</title>
+    <url>/2020/05/27/test28/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="显示效果测试"><a href="#显示效果测试" class="headerlink" title="显示效果测试"></a>显示效果测试</h1><h2 id="中文（标题二级）"><a href="#中文（标题二级）" class="headerlink" title="中文（标题二级）"></a>中文（标题二级）</h2><hr>
+<p>正文显示效果</p>
+<h1 id="雾"><a href="#雾" class="headerlink" title="雾"></a>雾</h1><p>早晨七点中左右，起雾了。这江北的雾虽不及江南的湿润，也不及北方的干涩，却恰到好处，没走向极端。</p>
+<p>这雾如同淘气的孩子，你不逮它，它便在你身边游荡，左窜、右窜，当生气时，想揪住它，它却悄然消失。</p>
+<h3 id="图片预览"><a href="#图片预览" class="headerlink" title="图片预览"></a>图片预览</h3><p><img src="https://tse3-mm.cn.bing.net/th/id/OIP.Pn9LvjVp_qgMpVzk79jCQAHaE7?w=290&h=188&c=7&o=5&dpr=1.56&pid=1.7" alt="img"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>实验3</title>
+    <url>/2018/05/18/%E5%AE%9E%E9%AA%8C3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="想要声明的点"><a href="#想要声明的点" class="headerlink" title="想要声明的点"></a>想要声明的点</h1><p>魂系列与宫崎英高。</p>
+<p>魂系列是近十年内最受欢迎的游戏系列之一，从2009年发售的恶魔之魂开始，游戏就奠定了自己的基调，玩法，系统以及叙事手法。可以说魂系列开创了一个新的亚游戏类型，即所谓的受死游戏。</p>
 ]]></content>
   </entry>
   <entry>
@@ -89,29 +114,11 @@
     <title>小学的一篇小练笔</title>
     <url>/2009/12/04/%E6%97%A7%E4%BA%8B%E9%87%8D%E6%8F%90/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="雾"><a href="#雾" class="headerlink" title="雾"></a>雾</h1><p>早晨七点中左右，起雾了。这江北的雾虽不及江南的湿润，也不及北方的干涩，却恰到好处，没走向极端。</p>
-<p>这雾如同淘气的孩子，你不逮它，它便在你身边游荡，左窜、右窜，当生气时，想揪住它，他却悄然消失。</p>
+<p>这雾如同淘气的孩子，你不逮它，它便在你身边游荡，左窜、右窜，当生气时，想揪住它，它却悄然消失。</p>
 ]]></content>
       <tags>
         <tag>小练笔</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>test28</title>
-    <url>/2020/05/27/test28/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="显示效果测试"><a href="#显示效果测试" class="headerlink" title="显示效果测试"></a>显示效果测试</h1><h2 id="中文（标题二级）"><a href="#中文（标题二级）" class="headerlink" title="中文（标题二级）"></a>中文（标题二级）</h2><hr>
-<p>正文显示效果</p>
-<h1 id="雾"><a href="#雾" class="headerlink" title="雾"></a>雾</h1><p>早晨七点中左右，起雾了。这江北的雾虽不及江南的湿润，也不及北方的干涩，却恰到好处，没走向极端。</p>
-<p>这雾如同淘气的孩子，你不逮它，它便在你身边游荡，左窜、右窜，当生气时，想揪住它，它却悄然消失。</p>
-<h3 id="图片预览"><a href="#图片预览" class="headerlink" title="图片预览"></a>图片预览</h3><p><img src="https://tse3-mm.cn.bing.net/th/id/OIP.Pn9LvjVp_qgMpVzk79jCQAHaE7?w=290&h=188&c=7&o=5&dpr=1.56&pid=1.7" alt="img"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>my first blog</title>
-    <url>/2018/05/12/%E5%AE%9E%E9%AA%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="title"><a href="#title" class="headerlink" title="title"></a>title</h1><h2 id="story"><a href="#story" class="headerlink" title="story"></a>story</h2><p>This is a story that I have to talk about in the beginning of a long journey.</p>
-<p><img src="/images/1.jpg" alt="doom"></p>
-<h2 id="end"><a href="#end" class="headerlink" title="end"></a>end</h2><p>Find the way home.</p>
-]]></content>
   </entry>
   <entry>
     <title>??28</title>
@@ -137,10 +144,9 @@
 <pre><code>*2009?12?4?*</code></pre>]]></content>
   </entry>
   <entry>
-    <title>实验3</title>
-    <url>/2018/05/18/%E5%AE%9E%E9%AA%8C3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="想要声明的点"><a href="#想要声明的点" class="headerlink" title="想要声明的点"></a>想要声明的点</h1><p>魂系列与宫崎英高。</p>
-<p>魂系列是近十年内最受欢迎的游戏系列之一，从2009年发售的恶魔之魂开始，游戏就奠定了自己的基调，玩法，系统以及叙事手法。可以说魂系列开创了一个新的亚游戏类型，即所谓的受死游戏。</p>
+    <title>demo1</title>
+    <url>/2020/06/04/demo1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>老师们好，这是一个简单的博客发布展示。</p>
 ]]></content>
   </entry>
 </search>
