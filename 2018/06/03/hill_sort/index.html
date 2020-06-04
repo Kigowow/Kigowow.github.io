@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>实验3 | Summereight Blog</title>
+  <title>希尔排序 | Summereight Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
@@ -43,20 +43,20 @@
 </header>
 
     <div id="content">
-      <article id="post-实验3" class="article article-type-post" itemprop="blogPost" itemscope>
+      <article id="post-hill_sort" class="article article-type-post" itemprop="blogPost" itemscope>
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h2 class="article-title" itemprop="headline name">
-      实验3
+      希尔排序
     </h2>
   
 
 
         <div class="article-meta">
-          <time class="article-date" datetime="2018-05-17T16:00:00.000Z" itemprop="datePublished">五月 18, 2018, 12:00 凌晨</time>
+          <time class="article-date" datetime="2018-06-02T21:13:50.000Z" itemprop="datePublished">六月 3, 2018, 5:13 凌晨</time>
 
           
         </div>
@@ -65,12 +65,19 @@
     <div class="article-entry" itemprop="articleBody">
       
       
-        <h1 id="想要声明的点"><a href="#想要声明的点" class="headerlink" title="想要声明的点"></a>想要声明的点</h1><p>魂系列与宫崎英高。</p>
-<p>魂系列是近十年内最受欢迎的游戏系列之一，从2009年发售的恶魔之魂开始，游戏就奠定了自己的基调，玩法，系统以及叙事手法。可以说魂系列开创了一个新的亚游戏类型，即所谓的受死游戏。</p>
-
+        <h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shell_sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> gap, i, j;</span><br><span class="line">        <span class="keyword">int</span> temp;</span><br><span class="line">        <span class="keyword">for</span> (gap = len &gt;&gt; <span class="number">1</span>; gap &gt; <span class="number">0</span>; gap &gt;&gt;= <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">for</span> (i = gap; i &lt; len; i++) &#123;</span><br><span class="line">                        temp = arr[i];</span><br><span class="line">                        <span class="keyword">for</span> (j = i - gap; j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; temp; j -= gap)</span><br><span class="line">                                arr[j + gap] = arr[j];</span><br><span class="line">                        arr[j + gap] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
+    
+    <div class="article-category">
+      
+      
+      
+        <b>Tags:</b>
+        <a class="article-tag-link" href="/tags/code/" rel="tag">code</a>
+      
+    </div>
     
 
     
@@ -80,21 +87,21 @@
   
 <nav id="article-nav" class="article-nav">
   
-    <a href="/2018/06/03/hill_sort/" id="article-nav-newer" class="article-nav-link-wrap newer">
+    <a href="/2018/08/18/book1/" id="article-nav-newer" class="article-nav-link-wrap newer">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          希尔排序
+          书评“1984”
         
       </div>
     </a>
   
   
-    <a href="/2018/05/15/heap_sortUntitled-1/" id="article-nav-older" class="article-nav-link-wrap older">
+    <a href="/2018/05/18/%E5%AE%9E%E9%AA%8C3/" id="article-nav-older" class="article-nav-link-wrap older">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">
         
-          堆排序
+          实验3
         
       </div>
     </a>

@@ -45,6 +45,132 @@
     <div id="content">
       
   
+    <article id="post-BFS.md" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="name">
+      <a href="/2018/03/26/BFS.md/">广度优先遍历</a>
+      
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2018-03-26T02:13:50.000Z" itemprop="datePublished">三月 26, 2018, 10:13 上午</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h3 id="BFS-broad-first-search"><a href="#BFS-broad-first-search" class="headerlink" title="BFS(broad first search)"></a>BFS(broad first search)</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFINITY  65535 <span class="comment">/* 表示权值的无穷*/</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> EdgeType;<span class="comment">//边上的权值类型</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> VertexType;<span class="comment">//顶点类型</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MaxSize=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> visited[MaxSize];<span class="comment">//全局标识数组</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MGraph</span>//邻接矩阵类</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        MGraph()&#123;vertexNum=<span class="number">0</span>;edgeNum=<span class="number">0</span>;&#125;</span><br><span class="line">        MGraph(VertexType a[],<span class="keyword">int</span> n);<span class="comment">//构造函数，初始化具有n个顶点的零图</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">CreateMGraph1</span><span class="params">(MGraph *Gp)</span></span>;<span class="comment">//建立无向图的邻接矩阵</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">BFS</span><span class="params">(<span class="keyword">int</span> v)</span></span>;<span class="comment">//从v出发广度优先遍历</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="keyword">int</span> vertexNum,edgeNum;<span class="comment">//顶点数和边数</span></span><br><span class="line">        EdgeType adj[MaxSize][MaxSize];<span class="comment">//邻接矩阵</span></span><br><span class="line">        VertexType vertex[MaxSize];<span class="comment">//顶点表</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//构造函数，初始化具有n个顶点的零图</span></span><br><span class="line">MGraph::MGraph(VertexType a[],<span class="keyword">int</span> n)</span><br><span class="line">&#123;</span><br><span class="line">    vertexNum=n;edgeNum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) vertex[i]=a[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">            adj[i][j]=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//建立无向图的邻接矩阵表示</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MGraph::CreateMGraph1</span><span class="params">(MGraph *Gp)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j, k;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入顶点数和边数（空格分隔）："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; Gp-&gt;vertexNum &gt;&gt; Gp-&gt;edgeNum;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入顶点信息（空格分隔）："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; Gp-&gt;vertexNum; i++)</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; Gp-&gt;vertex[i];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; Gp-&gt;vertexNum; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; Gp-&gt;vertexNum; j++)</span><br><span class="line">            Gp-&gt;adj[i][j] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; Gp-&gt;edgeNum; k++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入边（vi, vj)的上标i，下标j（空格分隔）:"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; i &gt;&gt; j;</span><br><span class="line">        Gp-&gt;adj[i][j] = <span class="number">1</span>;</span><br><span class="line">        Gp-&gt;adj[j][i] = <span class="number">1</span>;<span class="comment">// 因为是无向图，矩阵对称</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//从v出发广度优先搜索遍历连通图</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MGraph::BFS</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n=vertexNum,front,rear;</span><br><span class="line">    <span class="keyword">int</span> Q[MaxSize];<span class="comment">//队列</span></span><br><span class="line">    front=rear=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span>(v&lt;<span class="number">0</span>||v&gt;=n) <span class="keyword">throw</span> <span class="string">"位置出错"</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;vertex[v]&lt;&lt;<span class="string">"　"</span>;</span><br><span class="line">    visited[v]=<span class="number">1</span>;</span><br><span class="line">    Q[++rear]=v;<span class="comment">//被访问过的顶点进入队列</span></span><br><span class="line">    <span class="keyword">while</span>(front!=rear)</span><br><span class="line">    &#123;</span><br><span class="line">        v=Q[++front];<span class="comment">//队列首元素出队列</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(adj[v][j]==<span class="number">1</span>&amp;&amp;visited[j]==<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;vertex[j]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">                visited[j]=<span class="number">1</span>;</span><br><span class="line">                Q[++rear]=j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    MGraph grph;</span><br><span class="line">    grph.CreateMGraph1(&amp;grph);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;MaxSize;i++)</span><br><span class="line">        visited[i]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;grph.vertexNum;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;grph.vertexNum;j++)</span><br><span class="line">            &#123;<span class="built_in">cout</span>&lt;&lt;grph.adj[i][j]&lt;&lt;<span class="string">" "</span>;&#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"广度优先遍历结果："</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    grph.BFS(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+
+    
+  </div>
+</article>
+
+
+
+  
+    <article id="post-book2" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="name">
+      <a href="/2017/08/25/book2/">书评 乔布斯传</a>
+      
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2017-08-24T21:13:50.000Z" itemprop="datePublished">八月 25, 2017, 5:13 凌晨</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h2 id="读-乔布斯传"><a href="#读-乔布斯传" class="headerlink" title="读 乔布斯传"></a>读 乔布斯传</h2><h3 id><a href="#" class="headerlink" title></a></h3><blockquote>
+<p>Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma - which is living with the results of other people’s thinking. Don’t let the noise of other’s opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.<br><img src="https://img3.doubanio.com/view/subject/l/public/s6974202.jpg" alt="img"></p>
+</blockquote>
+<p>这不是一篇读后感。<br>你觉得怎样的人才适合追忆乔布斯?</p>
+<p>忠实的果粉说: “我上班背着Air，SOHO的时候用Pro工作，家里有27寸的iMac给老婆和孩子使用，用iPad来阅读和娱乐，160G的IPC存着我所有的勃拉姆斯和莫扎特，iPhone不必说是唯一的通讯工具，就是出门老婆经常要Facetime限制了我一些自由，商业会议只用深蓝渐变色主题的Keynote，哦，差点忘了，我刚让楼下的大爷给我的后脑勺修出一个苹果的Logo，大爷说你是这周第三个提这个要求的人了，这有点让我失落。”</p>
+<p>人生赢家总是少数，我苦苦挣扎的岁月里只买过两件苹果产品，一个是08年的iPod Touch，半年前刚刚落水溺死。一个是现在还在用的不带摄像头的iPad。<br>我觉得这样的我是没什么资格追忆乔布斯的 —— 我还没提我给Touch和iPad都贴了15块钱一张的磨砂贴膜。<br>我只是个普通的消费者，iDevices改变了我的生活，但我不会因为失去他们而没法生活。<br>我不是一个果粉，我从没好意思在地铁上或者星巴克里掏出自己不带摄像头的iPad大战僵尸，也压根没想过卖几个肾去试用一下阳光下是不是真的能看的清短信，偶尔使用别人的Mac我总是忘记Ctrl加空格不能切换输入法，我吃苹果甚至不会咬一口就扔掉。</p>
+<p>这样的我看上去绝不应该来这里废话，但我要为自己辩驳。我不是果粉，但是我崇敬Steve Jobs，甚至有些着迷，这点比得上任何人。<br>我高考英语作文中最后一句话写的是Stay Hungry, Stay Foolish；我大学考GRE作文里面举得例子是乔布斯吃寺庙的救济粮也要听书法课从而美化了麦金塔；但凡同学师长同事问起你的人生理想，我都会无比骄傲地说一句Change the World；这不是装X，几千元的iDevices没有颠覆我的生活，Jobs did.</p>
+<p>我没怎么和乔布斯打过交道。说得再坦荡一点，我只和Genius Bar里面的中国孩子们打过三个小时交道，其中两个半小时还在排队。<br>但我本以为我可以，这甚至一直是我奋斗的动力，我对以后能赚钱买几个iPhone没有兴趣，我的梦想是总有一天我会到库比蒂诺的飞船总部里喝杯咖啡，起码和乔布斯打声招呼，提醒他翻毛皮鞋沾了些灰尘。<br>可他却没有留给我这样的机会。</p>
+<p>这就是为什么当我10月5号早上8点30照常睁眼刷推看到消息的时候心碎了一地，如同初中的时候发现暗恋的女孩子牵着别人的手一样。<br>没有比这更贴切的比喻了，我不知道中国是不是真的有18岁以上的男人听到消息哭出了眼泪，我没有，我甚至没有太过悲伤。你总会懂得这世上漂亮姑娘和传奇人物都很多很多，传奇人物不断地改变着这个时代，用一句句Follow your heart指引你奋斗的方向，但毕竟美女和传奇都离你太远太远，甚至可能是个六度理论的反例，生活还要继续，你没必要太过悲伤。</p>
+<p>说实话我期望自己能更了解Steve，于是那天我终于狠下心订了129的美版传记，即使这样我也知道，别人口中的他，再真实，也不足为信。<br>拿到书大致翻了翻，Isaacson的叙述很朴实，行文也没有什么华丽的辞藻，书中的插图虽然不多，但每一张都很有意思，看得出是经过精心挑选的。<br>我虽然还没有读书，但是我相信乔布斯吸引人的故事和传说太多。</p>
+<p>太传奇的故事总让人觉得和易碎的暗恋一样不靠谱，我宁可放弃享受手指在Jobs的艺术品上划来划去的触感，也希望哪怕有一个机会能走过去拍拍他的肩膀，说句Hey buddy what’s up.</p>
+<p>究竟什么人才适合缅怀乔布斯? 什么人才能不人云亦云，而真正为Jobs触动、启示?</p>
+<p>我觉得这里没人适合，我们所做的一切的评述都处在一个离奇的立场，可能并没有多少人会舍得笔墨，写篇超过140字的长文来讲讲他和乔布斯的故事——因为我们没有故事。</p>
+<p>世界上最孤独的人是小说家，越多的人阅读他们的想象力与思考，他们就越定型，也越孤独。<br>从这个意义上说，卖出了几亿部iPhone的Steve Jobs，也孤独了56年。</p>
+<p>还记得WWDC2007上Jobs拿起iPhone 1代，从Google maps上找到附近的Starbucks的电话，拨过去说我们要450杯咖啡，转而狡黠的一笑，对着蒙住的接线员小姐说Oops just kidding wrong number sorry bye吗？</p>
+<p>说实话，也许那个可怜的接线员小姐都比我们更有资格追忆。</p>
+<p>但愿当跟风的人们已经脱下纪念的体恤，即将忘记离去的人是乔布斯、哈尔斯还是汤姆斯，匆匆忙忙赶下一班地铁的时候，你能有时间安安静静地坐下来，捧起这本传记，给自己一个微不足道的，追忆的理由。</p>
+
+      
+    </div>
+    
+    
+
+    
+  </div>
+</article>
+
+
+
+  
+    <article id="post-my-first-blog" class="article article-type-post" itemprop="blogPost" itemscope>
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 class="article-title" itemprop="name">
+      <a href="/2017/04/24/my-first-blog/">my first blog</a>
+      
+    </h2>
+  
+
+
+        <div class="article-meta">
+          <time class="article-date" datetime="2017-04-24T09:53:37.000Z" itemprop="datePublished">四月 24, 2017, 5:53 下午</time>
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h1 id="标题栏在这"><a href="#标题栏在这" class="headerlink" title="标题栏在这"></a>标题栏在这</h1><h2 id="二级标题的内容在这里"><a href="#二级标题的内容在这里" class="headerlink" title="二级标题的内容在这里"></a>二级标题的内容在这里</h2><p>这里是正文部分的内容，很容易分辨出来正文部分是什么样的东西。看清楚内容里面是什么。</p>
+
+      
+    </div>
+    
+    
+
+    
+  </div>
+</article>
+
+
+
+  
     <article id="post-旧事重提" class="article article-type-post" itemprop="blogPost" itemscope>
   <div class="article-inner">
     
